@@ -11,8 +11,6 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
-# from keras.layers import LSTM, Dropout, Dense
-# from keras.models import Sequential
 # import yfinance as yf
 import requests
 import os
@@ -21,7 +19,7 @@ import os
 
 # session = requests.Session()
 # msf_tick = yf.Ticker("MSFT")
-# df = msf_tick.history(start='2015-01-01', end='2024-01-01')
+# df = msf_tick.history(start='2015-01-01', end='2024-01-01') #use this if yf doesn't give any trouble downloading the data
 df = pd.read_csv("/home/rbarcrosspbar/Downloads/MSFT_1D.csv")
 df.set_index('datetime', inplace=True)
 df.sort_values(by="datetime", ascending=True, inplace=True)
